@@ -1,0 +1,109 @@
+.sidebar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar.dark {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+}
+
+.sidebar-conversations {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.sidebar-conversations .list-group-item {
+  cursor: pointer;
+  border: none;
+  margin-bottom: 2px;
+  background-color: transparent;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar.dark .sidebar-conversations .list-group-item {
+  color: #e0e0e0;
+}
+
+.sidebar-conversations .list-group-item:hover {
+  background-color: #e9ecef;
+}
+
+.sidebar.dark .sidebar-conversations .list-group-item:hover {
+  background-color: #404040;
+}
+
+.sidebar-conversations .list-group-item.active {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.sidebar-conversations .list-group-item.active .btn-link {
+  color: white !important;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+}
+
+.sidebar.dark hr {
+  border-color: #404040;
+}
+
+.sidebar.dark .btn-outline-secondary {
+  color: #e0e0e0;
+  border-color: #404040;
+}
+
+.sidebar.dark .btn-outline-secondary:hover {
+  background-color: #404040;
+  color: white;
+}
+
+/* Custom scrollbar for conversations */
+.sidebar-conversations::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-conversations::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.sidebar.dark .sidebar-conversations::-webkit-scrollbar-track {
+  background: #2d2d2d;
+}
+
+.sidebar-conversations::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2px;
+}
+
+.sidebar.dark .sidebar-conversations::-webkit-scrollbar-thumb {
+  background: #666;
+}
+
+.sidebar-conversations::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.sidebar.dark .sidebar-conversations::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    padding: 1rem !important;
+  }
+  
+  .sidebar-header h5 {
+    font-size: 1rem;
+  }
+  
+  .sidebar-conversations .list-group-item {
+    font-size: 0.9rem;
+  }
+}

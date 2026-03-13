@@ -1,0 +1,33 @@
+.sidebar-col {
+  background-color: #f8f9fa;
+  border-right: 1px solid #dee2e6;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.chat-col {
+  height: 100vh;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .sidebar-col {
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .chat-col {
+    height: calc(100vh - 200px);
+  }
+}
+
+/* Dark mode support */
+.dark-mode .sidebar-col {
+  background-color: #2d2d2d;
+  border-right-color: #404040;
+}
+
+.dark-mode .chat-col {
+  background-color: #1a1a1a;
+}
